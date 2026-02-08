@@ -15,6 +15,23 @@ namespace HawareShop
         public Customers()
         {
             InitializeComponent();
+            CustomerLoad();
+        }
+        Function Function = new Function();
+
+        private void btn_addCustomer_Click(object sender, EventArgs e)
+        {
+            string Name = txt_name.Text;
+            string Gender = txt_gender.Text;
+            string Phone = txt_phone.Text;
+           
+            Function.addCustomer(Name, Gender,Phone);
+            CustomerLoad();
+        }
+        private void CustomerLoad()
+        {
+            DataGridView dvg = dvg_customer;
+            Function.dgv_customer(dvg);
         }
     }
 }

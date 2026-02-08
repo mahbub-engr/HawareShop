@@ -30,27 +30,27 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             label6 = new Label();
             pictureBox5 = new PictureBox();
-            label5 = new Label();
+            btn_billingForm = new Label();
             pictureBox4 = new PictureBox();
-            label4 = new Label();
+            btn_customerForm = new Label();
             pictureBox3 = new PictureBox();
-            label2 = new Label();
+            btn_categoryForm = new Label();
             pictureBox2 = new PictureBox();
-            label1 = new Label();
+            btn_itemForm = new Label();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel3 = new Panel();
-            label8 = new Label();
+            btn_close = new Label();
             pictureBox8 = new PictureBox();
             label7 = new Label();
             textBox1 = new TextBox();
@@ -90,13 +90,13 @@
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(label5);
+            panel1.Controls.Add(btn_billingForm);
             panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(label4);
+            panel1.Controls.Add(btn_customerForm);
             panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(btn_categoryForm);
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(btn_itemForm);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -144,15 +144,15 @@
             pictureBox5.TabIndex = 5;
             pictureBox5.TabStop = false;
             // 
-            // label5
+            // btn_billingForm
             // 
-            label5.AutoSize = true;
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(63, 414);
-            label5.Name = "label5";
-            label5.Size = new Size(59, 18);
-            label5.TabIndex = 3;
-            label5.Text = "Billing";
+            btn_billingForm.AutoSize = true;
+            btn_billingForm.ForeColor = Color.White;
+            btn_billingForm.Location = new Point(63, 414);
+            btn_billingForm.Name = "btn_billingForm";
+            btn_billingForm.Size = new Size(59, 18);
+            btn_billingForm.TabIndex = 3;
+            btn_billingForm.Text = "Billing";
             // 
             // pictureBox4
             // 
@@ -164,15 +164,16 @@
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
             // 
-            // label4
+            // btn_customerForm
             // 
-            label4.AutoSize = true;
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(63, 352);
-            label4.Name = "label4";
-            label4.Size = new Size(86, 18);
-            label4.TabIndex = 3;
-            label4.Text = "Customer";
+            btn_customerForm.AutoSize = true;
+            btn_customerForm.ForeColor = Color.White;
+            btn_customerForm.Location = new Point(63, 352);
+            btn_customerForm.Name = "btn_customerForm";
+            btn_customerForm.Size = new Size(86, 18);
+            btn_customerForm.TabIndex = 3;
+            btn_customerForm.Text = "Customer";
+            btn_customerForm.Click += btn_customerForm_Click;
             // 
             // pictureBox3
             // 
@@ -184,15 +185,15 @@
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             // 
-            // label2
+            // btn_categoryForm
             // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(63, 289);
-            label2.Name = "label2";
-            label2.Size = new Size(81, 18);
-            label2.TabIndex = 3;
-            label2.Text = "Category";
+            btn_categoryForm.AutoSize = true;
+            btn_categoryForm.ForeColor = Color.White;
+            btn_categoryForm.Location = new Point(63, 289);
+            btn_categoryForm.Name = "btn_categoryForm";
+            btn_categoryForm.Size = new Size(81, 18);
+            btn_categoryForm.TabIndex = 3;
+            btn_categoryForm.Text = "Category";
             // 
             // pictureBox2
             // 
@@ -204,15 +205,15 @@
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // label1
+            // btn_itemForm
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(63, 226);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 18);
-            label1.TabIndex = 3;
-            label1.Text = "Items";
+            btn_itemForm.AutoSize = true;
+            btn_itemForm.ForeColor = Color.White;
+            btn_itemForm.Location = new Point(63, 226);
+            btn_itemForm.Name = "btn_itemForm";
+            btn_itemForm.Size = new Size(56, 18);
+            btn_itemForm.TabIndex = 3;
+            btn_itemForm.Text = "Items";
             // 
             // panel2
             // 
@@ -252,7 +253,7 @@
             // panel3
             // 
             panel3.BackColor = Color.LightSeaGreen;
-            panel3.Controls.Add(label8);
+            panel3.Controls.Add(btn_close);
             panel3.Controls.Add(pictureBox8);
             panel3.Controls.Add(label7);
             panel3.Dock = DockStyle.Top;
@@ -261,17 +262,17 @@
             panel3.Size = new Size(1115, 38);
             panel3.TabIndex = 3;
             // 
-            // label8
+            // btn_close
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(1063, 5);
-            label8.Name = "label8";
-            label8.Size = new Size(26, 25);
-            label8.TabIndex = 6;
-            label8.Text = "X";
-
+            btn_close.AutoSize = true;
+            btn_close.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_close.ForeColor = Color.White;
+            btn_close.Location = new Point(1063, 5);
+            btn_close.Name = "btn_close";
+            btn_close.Size = new Size(26, 25);
+            btn_close.TabIndex = 6;
+            btn_close.Text = "X";
+            btn_close.Click += btn_close_Click;
             // 
             // pictureBox8
             // 
@@ -418,25 +419,26 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle10.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle11.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            guna2DataGridView1.ColumnHeadersHeight = 4;
+            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.Location = new Point(192, 397);
             guna2DataGridView1.Name = "guna2DataGridView1";
@@ -455,7 +457,7 @@
             guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
             guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
             guna2DataGridView1.ThemeStyle.ReadOnly = false;
             guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
@@ -544,18 +546,18 @@
         private PictureBox pictureBox6;
         private Label label6;
         private PictureBox pictureBox5;
-        private Label label5;
+        private Label btn_billingForm;
         private PictureBox pictureBox4;
-        private Label label4;
+        private Label btn_customerForm;
         private PictureBox pictureBox3;
-        private Label label2;
+        private Label btn_categoryForm;
         private PictureBox pictureBox2;
-        private Label label1;
+        private Label btn_itemForm;
         private PictureBox pictureBox7;
         private Panel panel3;
         private PictureBox pictureBox8;
         private Label label7;
-        private Label label8;
+        private Label btn_close;
         private TextBox textBox1;
         private Label label10;
         private Label label9;

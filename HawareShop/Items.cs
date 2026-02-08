@@ -17,5 +17,16 @@ namespace HawareShop
             InitializeComponent();
         }
 
+        private void btn_customerForm_Click(object sender, EventArgs e)
+        {
+            Customers customers = new Customers();
+            customers.Show();
+            this.Hide();
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

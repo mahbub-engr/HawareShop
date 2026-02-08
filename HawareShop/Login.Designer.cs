@@ -34,13 +34,13 @@
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txt_username = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            txt_password = new TextBox();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
-            label4 = new Label();
-            label5 = new Label();
+            btn_login = new Button();
+            btn_reset = new Label();
+            btn_close = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -76,12 +76,12 @@
             label2.TabIndex = 2;
             label2.Text = "Username";
             // 
-            // textBox1
+            // txt_username
             // 
-            textBox1.Location = new Point(364, 195);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(241, 27);
-            textBox1.TabIndex = 3;
+            txt_username.Location = new Point(364, 195);
+            txt_username.Name = "txt_username";
+            txt_username.Size = new Size(241, 27);
+            txt_username.TabIndex = 3;
             // 
             // label3
             // 
@@ -92,12 +92,13 @@
             label3.TabIndex = 2;
             label3.Text = "Password";
             // 
-            // textBox2
+            // txt_password
             // 
-            textBox2.Location = new Point(364, 277);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(241, 27);
-            textBox2.TabIndex = 3;
+            txt_password.Location = new Point(364, 277);
+            txt_password.Name = "txt_password";
+            txt_password.Size = new Size(241, 27);
+            txt_password.TabIndex = 3;
+            txt_password.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -109,41 +110,43 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // btn_login
             // 
-            button1.BackColor = Color.Teal;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(406, 345);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 39);
-            button1.TabIndex = 5;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            btn_login.BackColor = Color.Teal;
+            btn_login.FlatAppearance.BorderColor = Color.White;
+            btn_login.FlatAppearance.BorderSize = 0;
+            btn_login.FlatStyle = FlatStyle.Flat;
+            btn_login.ForeColor = Color.White;
+            btn_login.Location = new Point(406, 345);
+            btn_login.Name = "btn_login";
+            btn_login.Size = new Size(130, 39);
+            btn_login.TabIndex = 5;
+            btn_login.Text = "Login";
+            btn_login.UseVisualStyleBackColor = false;
+            btn_login.Click += btn_login_Click;
             // 
-            // label4
+            // btn_reset
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 11.25F, FontStyle.Underline, GraphicsUnit.Point);
-            label4.ForeColor = Color.Red;
-            label4.Location = new Point(441, 408);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 18);
-            label4.TabIndex = 2;
-            label4.Text = "Reset";
+            btn_reset.AutoSize = true;
+            btn_reset.Font = new Font("Verdana", 11.25F, FontStyle.Underline, GraphicsUnit.Point);
+            btn_reset.ForeColor = Color.Red;
+            btn_reset.Location = new Point(441, 408);
+            btn_reset.Name = "btn_reset";
+            btn_reset.Size = new Size(50, 18);
+            btn_reset.TabIndex = 2;
+            btn_reset.Text = "Reset";
             // 
-            // label5
+            // btn_close
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.Red;
-            label5.Location = new Point(773, 9);
-            label5.Name = "label5";
-            label5.Size = new Size(26, 25);
-            label5.TabIndex = 2;
-            label5.Text = "X";
+            btn_close.AutoSize = true;
+            btn_close.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_close.ForeColor = Color.Red;
+            btn_close.Location = new Point(773, 9);
+            btn_close.Name = "btn_close";
+            btn_close.Size = new Size(26, 25);
+            btn_close.TabIndex = 2;
+            btn_close.Text = "X";
+            btn_close.Click += btn_close_Click;
             // 
             // Login
             // 
@@ -151,12 +154,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(828, 540);
-            Controls.Add(button1);
+            Controls.Add(btn_login);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label5);
-            Controls.Add(label4);
+            Controls.Add(txt_password);
+            Controls.Add(txt_username);
+            Controls.Add(btn_close);
+            Controls.Add(btn_reset);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -177,13 +180,13 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txt_username;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txt_password;
         private Label label3;
         private PictureBox pictureBox1;
-        private Button button1;
-        private Label label5;
-        private Label label4;
+        private Button btn_login;
+        private Label btn_close;
+        private Label btn_reset;
     }
 }

@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            dvg_customer = new Guna.UI2.WinForms.Guna2DataGridView();
             button3 = new Button();
-            button2 = new Button();
+            btn_addCustomer = new Button();
             button1 = new Button();
-            comboBox1 = new ComboBox();
-            textBox3 = new TextBox();
-            textBox1 = new TextBox();
+            txt_gender = new ComboBox();
+            txt_phone = new TextBox();
+            txt_name = new TextBox();
             label14 = new Label();
-            label11 = new Label();
+            label = new Label();
             label15 = new Label();
             label10 = new Label();
             label9 = new Label();
-            label8 = new Label();
+            btn_close = new Label();
             panel3 = new Panel();
             pictureBox8 = new PictureBox();
             label7 = new Label();
@@ -65,7 +65,7 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dvg_customer).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel1.SuspendLayout();
@@ -79,56 +79,56 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // guna2DataGridView1
+            // dvg_customer
             // 
-            dataGridViewCellStyle13.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle14.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = Color.White;
-            dataGridViewCellStyle15.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle15.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(177, 308);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowTemplate.Height = 25;
-            guna2DataGridView1.Size = new Size(1062, 150);
-            guna2DataGridView1.TabIndex = 26;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dvg_customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dvg_customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dvg_customer.ColumnHeadersHeight = 4;
+            dvg_customer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dvg_customer.DefaultCellStyle = dataGridViewCellStyle6;
+            dvg_customer.GridColor = Color.FromArgb(231, 229, 255);
+            dvg_customer.Location = new Point(177, 308);
+            dvg_customer.Name = "dvg_customer";
+            dvg_customer.RowHeadersVisible = false;
+            dvg_customer.RowTemplate.Height = 25;
+            dvg_customer.Size = new Size(1062, 150);
+            dvg_customer.TabIndex = 26;
+            dvg_customer.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dvg_customer.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dvg_customer.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dvg_customer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dvg_customer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dvg_customer.ThemeStyle.BackColor = Color.White;
+            dvg_customer.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dvg_customer.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dvg_customer.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dvg_customer.ThemeStyle.HeaderStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dvg_customer.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dvg_customer.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dvg_customer.ThemeStyle.HeaderStyle.Height = 4;
+            dvg_customer.ThemeStyle.ReadOnly = false;
+            dvg_customer.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dvg_customer.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dvg_customer.ThemeStyle.RowsStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dvg_customer.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dvg_customer.ThemeStyle.RowsStyle.Height = 25;
+            dvg_customer.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dvg_customer.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // button3
             // 
@@ -137,26 +137,27 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = SystemColors.Window;
-            button3.Location = new Point(778, 199);
+            button3.Location = new Point(816, 199);
             button3.Name = "button3";
             button3.Size = new Size(104, 28);
             button3.TabIndex = 25;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_addCustomer
             // 
-            button2.BackColor = Color.Teal;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(654, 199);
-            button2.Name = "button2";
-            button2.Size = new Size(104, 28);
-            button2.TabIndex = 24;
-            button2.Text = "Add Item";
-            button2.UseVisualStyleBackColor = false;
+            btn_addCustomer.BackColor = Color.Teal;
+            btn_addCustomer.FlatAppearance.BorderColor = Color.White;
+            btn_addCustomer.FlatAppearance.BorderSize = 0;
+            btn_addCustomer.FlatStyle = FlatStyle.Flat;
+            btn_addCustomer.ForeColor = Color.White;
+            btn_addCustomer.Location = new Point(654, 199);
+            btn_addCustomer.Name = "btn_addCustomer";
+            btn_addCustomer.Size = new Size(137, 28);
+            btn_addCustomer.TabIndex = 24;
+            btn_addCustomer.Text = "Add Customer";
+            btn_addCustomer.UseVisualStyleBackColor = false;
+            btn_addCustomer.Click += btn_addCustomer_Click;
             // 
             // button1
             // 
@@ -172,27 +173,28 @@
             button1.Text = "Edit";
             button1.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // txt_gender
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(636, 139);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(144, 26);
-            comboBox1.TabIndex = 22;
+            txt_gender.FormattingEnabled = true;
+            txt_gender.Items.AddRange(new object[] { "Male", "Female" });
+            txt_gender.Location = new Point(636, 139);
+            txt_gender.Name = "txt_gender";
+            txt_gender.Size = new Size(144, 26);
+            txt_gender.TabIndex = 22;
             // 
-            // textBox3
+            // txt_phone
             // 
-            textBox3.Location = new Point(816, 138);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(144, 27);
-            textBox3.TabIndex = 18;
+            txt_phone.Location = new Point(816, 138);
+            txt_phone.Name = "txt_phone";
+            txt_phone.Size = new Size(144, 27);
+            txt_phone.TabIndex = 18;
             // 
-            // textBox1
+            // txt_name
             // 
-            textBox1.Location = new Point(451, 138);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(144, 27);
-            textBox1.TabIndex = 21;
+            txt_name.Location = new Point(451, 138);
+            txt_name.Name = "txt_name";
+            txt_name.Size = new Size(144, 27);
+            txt_name.TabIndex = 21;
             // 
             // label14
             // 
@@ -203,14 +205,14 @@
             label14.TabIndex = 17;
             label14.Text = "Items List";
             // 
-            // label11
+            // label
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(816, 106);
-            label11.Name = "label11";
-            label11.Size = new Size(47, 18);
-            label11.TabIndex = 14;
-            label11.Text = "Price";
+            label.AutoSize = true;
+            label.Location = new Point(816, 106);
+            label.Name = "label";
+            label.Size = new Size(58, 18);
+            label.TabIndex = 14;
+            label.Text = "Phone";
             // 
             // label15
             // 
@@ -227,34 +229,34 @@
             label10.AutoSize = true;
             label10.Location = new Point(636, 106);
             label10.Name = "label10";
-            label10.Size = new Size(81, 18);
+            label10.Size = new Size(66, 18);
             label10.TabIndex = 12;
-            label10.Text = "Category";
+            label10.Text = "Gender";
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Location = new Point(451, 106);
             label9.Name = "label9";
-            label9.Size = new Size(47, 18);
+            label9.Size = new Size(55, 18);
             label9.TabIndex = 11;
-            label9.Text = "Item";
+            label9.Text = "Name";
             // 
-            // label8
+            // btn_close
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(1063, 5);
-            label8.Name = "label8";
-            label8.Size = new Size(26, 25);
-            label8.TabIndex = 6;
-            label8.Text = "X";
+            btn_close.AutoSize = true;
+            btn_close.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_close.ForeColor = Color.White;
+            btn_close.Location = new Point(1063, 5);
+            btn_close.Name = "btn_close";
+            btn_close.Size = new Size(26, 25);
+            btn_close.TabIndex = 6;
+            btn_close.Text = "X";
             // 
             // panel3
             // 
             panel3.BackColor = Color.LightSeaGreen;
-            panel3.Controls.Add(label8);
+            panel3.Controls.Add(btn_close);
             panel3.Controls.Add(pictureBox8);
             panel3.Controls.Add(label7);
             panel3.Dock = DockStyle.Top;
@@ -455,15 +457,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1280, 720);
-            Controls.Add(guna2DataGridView1);
+            Controls.Add(dvg_customer);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btn_addCustomer);
             Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox1);
+            Controls.Add(txt_gender);
+            Controls.Add(txt_phone);
+            Controls.Add(txt_name);
             Controls.Add(label14);
-            Controls.Add(label11);
+            Controls.Add(label);
             Controls.Add(label15);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -471,11 +473,11 @@
             Controls.Add(panel1);
             Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Customers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Customers";
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dvg_customer).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -496,19 +498,19 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dvg_customer;
         private Button button3;
-        private Button button2;
+        private Button btn_addCustomer;
         private Button button1;
-        private ComboBox comboBox1;
-        private TextBox textBox3;
-        private TextBox textBox1;
+        private ComboBox txt_gender;
+        private TextBox txt_phone;
+        private TextBox txt_name;
         private Label label14;
-        private Label label11;
+        private Label label;
         private Label label15;
         private Label label10;
         private Label label9;
-        private Label label8;
+        private Label btn_close;
         private Panel panel3;
         private PictureBox pictureBox8;
         private Label label7;
