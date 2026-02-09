@@ -81,7 +81,7 @@
             txt_username.Location = new Point(364, 195);
             txt_username.Name = "txt_username";
             txt_username.Size = new Size(241, 27);
-            txt_username.TabIndex = 3;
+            txt_username.TabIndex = 0;
             // 
             // label3
             // 
@@ -97,7 +97,7 @@
             txt_password.Location = new Point(364, 277);
             txt_password.Name = "txt_password";
             txt_password.Size = new Size(241, 27);
-            txt_password.TabIndex = 3;
+            txt_password.TabIndex = 1;
             txt_password.UseSystemPasswordChar = true;
             // 
             // pictureBox1

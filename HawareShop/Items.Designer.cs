@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -53,18 +53,18 @@
             btn_close = new Label();
             pictureBox8 = new PictureBox();
             label7 = new Label();
-            textBox1 = new TextBox();
+            txt_itemName = new TextBox();
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
-            textBox3 = new TextBox();
+            txt_itemPrice = new TextBox();
             label12 = new Label();
-            textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
+            txt_ItemStock = new TextBox();
+            txt_itemCategory = new ComboBox();
             label13 = new Label();
-            textBox2 = new TextBox();
+            txt_itemManufac = new TextBox();
             button1 = new Button();
-            button2 = new Button();
+            btn_add_items = new Button();
             button3 = new Button();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             label14 = new Label();
@@ -194,6 +194,7 @@
             btn_categoryForm.Size = new Size(81, 18);
             btn_categoryForm.TabIndex = 3;
             btn_categoryForm.Text = "Category";
+            btn_categoryForm.Click += btn_categoryForm_Click;
             // 
             // pictureBox2
             // 
@@ -294,21 +295,21 @@
             label7.TabIndex = 3;
             label7.Text = "Hardware Shop Management System 2.0";
             // 
-            // textBox1
+            // txt_itemName
             // 
-            textBox1.Location = new Point(336, 141);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(144, 27);
-            textBox1.TabIndex = 5;
+            txt_itemName.Location = new Point(336, 141);
+            txt_itemName.Name = "txt_itemName";
+            txt_itemName.Size = new Size(144, 27);
+            txt_itemName.TabIndex = 0;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Location = new Point(336, 109);
             label9.Name = "label9";
-            label9.Size = new Size(47, 18);
+            label9.Size = new Size(100, 18);
             label9.TabIndex = 4;
-            label9.Text = "Item";
+            label9.Text = "Item Name";
             // 
             // label10
             // 
@@ -328,12 +329,12 @@
             label11.TabIndex = 4;
             label11.Text = "Price";
             // 
-            // textBox3
+            // txt_itemPrice
             // 
-            textBox3.Location = new Point(701, 141);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(144, 27);
-            textBox3.TabIndex = 5;
+            txt_itemPrice.Location = new Point(701, 141);
+            txt_itemPrice.Name = "txt_itemPrice";
+            txt_itemPrice.Size = new Size(144, 27);
+            txt_itemPrice.TabIndex = 5;
             // 
             // label12
             // 
@@ -344,20 +345,20 @@
             label12.TabIndex = 4;
             label12.Text = "Stock";
             // 
-            // textBox4
+            // txt_ItemStock
             // 
-            textBox4.Location = new Point(889, 141);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(144, 27);
-            textBox4.TabIndex = 5;
+            txt_ItemStock.Location = new Point(889, 141);
+            txt_ItemStock.Name = "txt_ItemStock";
+            txt_ItemStock.Size = new Size(144, 27);
+            txt_ItemStock.TabIndex = 5;
             // 
-            // comboBox1
+            // txt_itemCategory
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(521, 142);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(144, 26);
-            comboBox1.TabIndex = 6;
+            txt_itemCategory.FormattingEnabled = true;
+            txt_itemCategory.Location = new Point(521, 142);
+            txt_itemCategory.Name = "txt_itemCategory";
+            txt_itemCategory.Size = new Size(144, 26);
+            txt_itemCategory.TabIndex = 6;
             // 
             // label13
             // 
@@ -368,12 +369,12 @@
             label13.TabIndex = 4;
             label13.Text = "Manufacturer";
             // 
-            // textBox2
+            // txt_itemManufac
             // 
-            textBox2.Location = new Point(629, 216);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(144, 27);
-            textBox2.TabIndex = 5;
+            txt_itemManufac.Location = new Point(629, 216);
+            txt_itemManufac.Name = "txt_itemManufac";
+            txt_itemManufac.Size = new Size(144, 27);
+            txt_itemManufac.TabIndex = 5;
             // 
             // button1
             // 
@@ -389,19 +390,19 @@
             button1.Text = "Edit";
             button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_add_items
             // 
-            button2.BackColor = Color.Teal;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(644, 286);
-            button2.Name = "button2";
-            button2.Size = new Size(104, 28);
-            button2.TabIndex = 7;
-            button2.Text = "Add Item";
-            button2.UseVisualStyleBackColor = false;
+            btn_add_items.BackColor = Color.Teal;
+            btn_add_items.FlatAppearance.BorderColor = Color.White;
+            btn_add_items.FlatAppearance.BorderSize = 0;
+            btn_add_items.FlatStyle = FlatStyle.Flat;
+            btn_add_items.ForeColor = Color.White;
+            btn_add_items.Location = new Point(644, 286);
+            btn_add_items.Name = "btn_add_items";
+            btn_add_items.Size = new Size(104, 28);
+            btn_add_items.TabIndex = 7;
+            btn_add_items.Text = "Add Item";
+            btn_add_items.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -419,26 +420,26 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 4;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.Location = new Point(192, 397);
             guna2DataGridView1.Name = "guna2DataGridView1";
@@ -495,13 +496,13 @@
             ClientSize = new Size(1280, 720);
             Controls.Add(guna2DataGridView1);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btn_add_items);
             Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox2);
-            Controls.Add(textBox3);
-            Controls.Add(textBox1);
+            Controls.Add(txt_itemCategory);
+            Controls.Add(txt_ItemStock);
+            Controls.Add(txt_itemManufac);
+            Controls.Add(txt_itemPrice);
+            Controls.Add(txt_itemName);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
@@ -558,18 +559,18 @@
         private PictureBox pictureBox8;
         private Label label7;
         private Label btn_close;
-        private TextBox textBox1;
+        private TextBox txt_itemName;
         private Label label10;
         private Label label9;
-        private TextBox textBox4;
-        private TextBox textBox3;
+        private TextBox txt_ItemStock;
+        private TextBox txt_itemPrice;
         private Label label12;
         private Label label11;
-        private ComboBox comboBox1;
-        private TextBox textBox2;
+        private ComboBox txt_itemCategory;
+        private TextBox txt_itemManufac;
         private Label label13;
         private Button button3;
-        private Button button2;
+        private Button btn_add_items;
         private Button button1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Label label14;

@@ -12,12 +12,13 @@ namespace HawareShop
 {
     public partial class Customers : Form
     {
+        Function Function = new Function();
         public Customers()
         {
             InitializeComponent();
             CustomerLoad();
         }
-        Function Function = new Function();
+        
 
         private void btn_addCustomer_Click(object sender, EventArgs e)
         {

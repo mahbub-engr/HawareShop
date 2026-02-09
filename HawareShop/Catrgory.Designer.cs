@@ -30,29 +30,29 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Catrgory));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             label6 = new Label();
             pictureBox5 = new PictureBox();
-            label5 = new Label();
+            btn_BillingForm = new Label();
             pictureBox4 = new PictureBox();
-            label4 = new Label();
+            btn_CustomerForm = new Label();
             pictureBox3 = new PictureBox();
             label2 = new Label();
             pictureBox2 = new PictureBox();
-            label1 = new Label();
+            btn_ItemForm = new Label();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             label3 = new Label();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            dvg_category = new Guna.UI2.WinForms.Guna2DataGridView();
             button3 = new Button();
-            button2 = new Button();
+            btn_add_category = new Button();
             button1 = new Button();
-            textBox2 = new TextBox();
+            txt_category = new TextBox();
             label14 = new Label();
             label13 = new Label();
             label15 = new Label();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dvg_category).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
@@ -82,13 +82,13 @@
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(label5);
+            panel1.Controls.Add(btn_BillingForm);
             panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(label4);
+            panel1.Controls.Add(btn_CustomerForm);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(btn_ItemForm);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -136,15 +136,16 @@
             pictureBox5.TabIndex = 5;
             pictureBox5.TabStop = false;
             // 
-            // label5
+            // btn_BillingForm
             // 
-            label5.AutoSize = true;
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(63, 414);
-            label5.Name = "label5";
-            label5.Size = new Size(59, 18);
-            label5.TabIndex = 3;
-            label5.Text = "Billing";
+            btn_BillingForm.AutoSize = true;
+            btn_BillingForm.ForeColor = Color.White;
+            btn_BillingForm.Location = new Point(63, 414);
+            btn_BillingForm.Name = "btn_BillingForm";
+            btn_BillingForm.Size = new Size(59, 18);
+            btn_BillingForm.TabIndex = 3;
+            btn_BillingForm.Text = "Billing";
+            btn_BillingForm.Click += btn_BillingForm_Click;
             // 
             // pictureBox4
             // 
@@ -156,15 +157,16 @@
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
             // 
-            // label4
+            // btn_CustomerForm
             // 
-            label4.AutoSize = true;
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(63, 352);
-            label4.Name = "label4";
-            label4.Size = new Size(86, 18);
-            label4.TabIndex = 3;
-            label4.Text = "Customer";
+            btn_CustomerForm.AutoSize = true;
+            btn_CustomerForm.ForeColor = Color.White;
+            btn_CustomerForm.Location = new Point(63, 352);
+            btn_CustomerForm.Name = "btn_CustomerForm";
+            btn_CustomerForm.Size = new Size(86, 18);
+            btn_CustomerForm.TabIndex = 3;
+            btn_CustomerForm.Text = "Customer";
+            btn_CustomerForm.Click += btn_CustomerForm_Click;
             // 
             // pictureBox3
             // 
@@ -196,15 +198,16 @@
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // label1
+            // btn_ItemForm
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(63, 226);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 18);
-            label1.TabIndex = 3;
-            label1.Text = "Items";
+            btn_ItemForm.AutoSize = true;
+            btn_ItemForm.ForeColor = Color.White;
+            btn_ItemForm.Location = new Point(63, 226);
+            btn_ItemForm.Name = "btn_ItemForm";
+            btn_ItemForm.Size = new Size(56, 18);
+            btn_ItemForm.TabIndex = 3;
+            btn_ItemForm.Text = "Items";
+            btn_ItemForm.Click += btn_ItemForm_Click;
             // 
             // panel2
             // 
@@ -236,56 +239,56 @@
             label3.TabIndex = 3;
             label3.Text = "Logout";
             // 
-            // guna2DataGridView1
+            // dvg_category
             // 
-            dataGridViewCellStyle7.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle8.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.White;
-            dataGridViewCellStyle9.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(171, 329);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowTemplate.Height = 25;
-            guna2DataGridView1.Size = new Size(1062, 150);
-            guna2DataGridView1.TabIndex = 27;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dvg_category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dvg_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dvg_category.ColumnHeadersHeight = 4;
+            dvg_category.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dvg_category.DefaultCellStyle = dataGridViewCellStyle6;
+            dvg_category.GridColor = Color.FromArgb(231, 229, 255);
+            dvg_category.Location = new Point(492, 339);
+            dvg_category.Name = "dvg_category";
+            dvg_category.RowHeadersVisible = false;
+            dvg_category.RowTemplate.Height = 25;
+            dvg_category.Size = new Size(368, 150);
+            dvg_category.TabIndex = 27;
+            dvg_category.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dvg_category.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dvg_category.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dvg_category.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dvg_category.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dvg_category.ThemeStyle.BackColor = Color.White;
+            dvg_category.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dvg_category.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dvg_category.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dvg_category.ThemeStyle.HeaderStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dvg_category.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dvg_category.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dvg_category.ThemeStyle.HeaderStyle.Height = 4;
+            dvg_category.ThemeStyle.ReadOnly = false;
+            dvg_category.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dvg_category.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dvg_category.ThemeStyle.RowsStyle.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dvg_category.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dvg_category.ThemeStyle.RowsStyle.Height = 25;
+            dvg_category.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dvg_category.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // button3
             // 
@@ -294,26 +297,27 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = SystemColors.Window;
-            button3.Location = new Point(767, 226);
+            button3.Location = new Point(804, 226);
             button3.Name = "button3";
             button3.Size = new Size(104, 28);
             button3.TabIndex = 26;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_add_category
             // 
-            button2.BackColor = Color.Teal;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(643, 226);
-            button2.Name = "button2";
-            button2.Size = new Size(104, 28);
-            button2.TabIndex = 25;
-            button2.Text = "Add Item";
-            button2.UseVisualStyleBackColor = false;
+            btn_add_category.BackColor = Color.Teal;
+            btn_add_category.FlatAppearance.BorderColor = Color.White;
+            btn_add_category.FlatAppearance.BorderSize = 0;
+            btn_add_category.FlatStyle = FlatStyle.Flat;
+            btn_add_category.ForeColor = Color.White;
+            btn_add_category.Location = new Point(643, 226);
+            btn_add_category.Name = "btn_add_category";
+            btn_add_category.Size = new Size(136, 28);
+            btn_add_category.TabIndex = 25;
+            btn_add_category.Text = "Add Category";
+            btn_add_category.UseVisualStyleBackColor = false;
+            btn_add_category.Click += btn_add_category_Click;
             // 
             // button1
             // 
@@ -329,12 +333,13 @@
             button1.Text = "Edit";
             button1.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // txt_category
             // 
-            textBox2.Location = new Point(628, 156);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(144, 27);
-            textBox2.TabIndex = 20;
+            txt_category.Location = new Point(628, 156);
+            txt_category.Name = "txt_category";
+            txt_category.Size = new Size(144, 27);
+            txt_category.TabIndex = 20;
+            txt_category.TextAlign = HorizontalAlignment.Center;
             // 
             // label14
             // 
@@ -360,9 +365,9 @@
             label15.ForeColor = Color.Red;
             label15.Location = new Point(263, 62);
             label15.Name = "label15";
-            label15.Size = new Size(193, 18);
+            label15.Size = new Size(192, 18);
             label15.TabIndex = 13;
-            label15.Text = "Categoty Management";
+            label15.Text = "Category Management";
             // 
             // panel3
             // 
@@ -418,11 +423,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1280, 720);
-            Controls.Add(guna2DataGridView1);
+            Controls.Add(dvg_category);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btn_add_category);
             Controls.Add(button1);
-            Controls.Add(textBox2);
+            Controls.Add(txt_category);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label15);
@@ -430,7 +435,7 @@
             Controls.Add(panel1);
             Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Catrgory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Catrgory";
@@ -445,7 +450,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dvg_category).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -460,21 +465,21 @@
         private PictureBox pictureBox6;
         private Label label6;
         private PictureBox pictureBox5;
-        private Label label5;
+        private Label btn_BillingForm;
         private PictureBox pictureBox4;
-        private Label label4;
+        private Label btn_CustomerForm;
         private PictureBox pictureBox3;
         private Label label2;
         private PictureBox pictureBox2;
-        private Label label1;
+        private Label btn_ItemForm;
         private Panel panel2;
         private PictureBox pictureBox1;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dvg_category;
         private Button button3;
-        private Button button2;
+        private Button btn_add_category;
         private Button button1;
-        private TextBox textBox2;
+        private TextBox txt_category;
         private Label label14;
         private Label label13;
         private Label label15;
